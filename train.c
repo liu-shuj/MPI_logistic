@@ -1,3 +1,5 @@
+// Copyright © 2019 Shujun Liu
+
 #include<stdio.h>
 #include<mpi.h>
 #include<math.h>
