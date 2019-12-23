@@ -59,6 +59,8 @@ int main(int argc, char** argv)
         rows=totalrows/np+totalrows%np;
         mystart=totalrows-rows;
     }
+
+    // notice: reading not memory efficient
     double** mydata=&(data[mystart]);
     double* myt=&(t[mystart]);
     
