@@ -48,7 +48,8 @@ int main(int argc, char** argv)
     data[0]=(double*)malloc(totalrows*cols*sizeof(double));
     for(int i=1;i<totalrows;i++)
         data[i]=data[0]+i*cols;    
-    read_data(datafile,data,totalrows,cols);
+    read_data(datafile,data,totalrows,cols); //  bias need to be added in data manually
+    
     
     double* t=(double*)malloc(totalrows*sizeof(double));
     read_labels(labelfile,t,totalrows);
