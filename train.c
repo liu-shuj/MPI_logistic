@@ -94,8 +94,9 @@ int main(int argc, char** argv)
         //for(int i=0;i<rows;i++)
 	//printf("%lf ",myt[i]);
 	//printf("\n");
-        for(int i=0;i<cols;i++)
-            for(int j=0;j<rows;j++)
+        
+        for(int j=0;j<rows;j++)
+		for(int i=0;i<cols;i++)
                 dotmv[i]+=mydata[j][i]*(y[j]-myt[j]);
         //for(int i=0;i<cols;i++)
 	   // printf("%lf ",dotmv[i]);
