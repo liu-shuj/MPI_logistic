@@ -48,7 +48,7 @@ int main(int argc, char** argv)
     data[0]=(double*)malloc(totalrows*cols*sizeof(double));
     for(int i=1;i<totalrows;i++)
         data[i]=data[0]+i*cols;    
-    read_data(datafile,data,totalrows,cols); //  bias need to be added in data manually
+    read_data(datafile,data,totalrows,cols); //  a new column with all value=1 need to be added in data manually to reduce bias
     
     
     double* t=(double*)malloc(totalrows*sizeof(double));
@@ -61,7 +61,7 @@ int main(int argc, char** argv)
         mystart=totalrows-rows;
     }
 
-    // notice: reading not memory efficient
+    // TODO: reading is not memory efficient
     double** mydata=&(data[mystart]);
     double* myt=&(t[mystart]);
     
